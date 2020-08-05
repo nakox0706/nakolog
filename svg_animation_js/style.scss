@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+.svg_1,
+.svg_2,
+.svg_3,
+.svg_4,
+.svg_5
+{
+  border-top: 1px solid #ddd;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 25% 0;
+  text-align: center;
+
+  svg {
+    width: 300px;
+  }
+
+}
+
+.svg_1,
+.svg_3,
+.svg_5
+{
+  background: #ddd;
+
+}
+
+/*/////////////////////////////////////////////////
+//吹き出しのパターン色々
+/////////////////////////////////////////////////*/
+.svg__anime  {
+  display: none;
+
+}
+
+.on {
+    .svg__anime {
+      display: block;
+    }
+
+    .svg__anime-1 {
+     animation: bound 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
+    }
+    .svg__anime-2 {
+     animation: bound 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s both;
+    }
+    .svg__anime-3 {
+     animation: bound 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1s both;
+    }
+    .svg__anime-4 {
+     animation: bound 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.1s both;
+    }
+    .svg__anime-5 {
+     animation: bound 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2s both;
+    }
+    .svg__anime-6 {
+     animation: bound 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3s both;
+    }
+    .svg__anime-7 {
+     animation: bound 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5s both;
+    }
+    .svg__anime-8 {
+     animation: bound 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.6s both;
+    }
+    .svg__anime-9 {
+     animation: bound 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.7s both;
+    }
+
+}
+
+@keyframes bound {
+  0% {
+    fill: transparent;
+    transform: translateY(15px);
+  }
+
+  80% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    fill: rgba(125,152,206, 1);
+    transform: translateY(0px);
+  }
+}
+
+// キャンパスマップ
+
+
+
+ .btn:hover {
+      .svg__anime-1 {
+        animation: bownd 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
+      }
+      .svg__anime-2 {
+        animation: bownd 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s both;
+      }
+      .svg__anime-3 {
+        animation: bownd 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1s both;
+      }
+      .svg__anime-4 {
+        animation: bownd 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.1s both;
+      }
+      .svg__anime-5 {
+        animation: bownd 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2s both;
+      }
+      .svg__anime-6 {
+        animation: bownd 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3s both;
+      }
+      .svg__anime-7 {
+        animation: bownd 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5s both;
+      }
+      .svg__anime-8 {
+        animation: bownd 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.6s both;
+      }
+      .svg__anime-9 {
+        animation: bownd 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.7s both;
+      }
+ }
