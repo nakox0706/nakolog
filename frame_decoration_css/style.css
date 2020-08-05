@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  counter-reset: chapter;
+}
+h2:before {
+  content: counter(chapter) "章. ";
+  counter-increment: chapter;
+}
+
+section {
+  width: 50%;
+  margin: 5% auto;
+}
+
+h2{
+  margin-top: 60px;
+}
+
+hr {
+  padding: 20px;
+  border: 0px;
+}
+
+p{
+  padding:20px;
+}
+
+@media only screen and (max-width: 767px){
+  section {
+    width: 90%;
+    margin: 5% auto;
+  }
+}
+
+
+/*/////////////////////////////////////////////////
+//フレーム装飾
+/////////////////////////////////////////////////*/
+
+.frame_1 {
+  border:solid 1px #9D50BB;
+  padding: 20px;
+  line-height: 130%;
+  display: block;
+}
+
+.frame_1 h3{
+  display: block;
+  line-height: 130%;
+  font-size: 120%;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.frame_2 {
+  border:dotted 4px #9D50BB;
+  padding: 20px;
+  line-height: 130%;
+  display: block;
+}
+
+.frame_2 h3{
+  display: block;
+  line-height: 130%;
+  font-size: 120%;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.frame_3 {
+  position: relative;
+  background: #f8f0e4;
+  line-height: 130%;
+  display: block;
+  padding: 20px;
+}
+
+.frame_3 h3{
+  display: block;
+  background:#9D50BB;
+  color: #fff;
+  padding: 5px 20px;
+  text-align: center;
+  line-height: 130%;
+  font-size: 120%;
+  margin: -20px -20px 20px -20px;
+  position: relative;
+}
+
+.frame_3 h3::after {
+  border: 8px solid transparent;
+  border-top-color: #9D50BB;
+  content: '';
+  height: 0;
+  left: 49%;
+  position: absolute;
+  top: 100%;
+  width: 0;
+}
+
+.frame_4 {
+  position: relative;
+  background: #f8f0e4;
+  line-height: 130%;
+  display: block;
+  padding: 20px;
+}
+
+.frame_4:before {
+  content: "POINT";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 50px;
+  height: 35px;
+  margin: 0;
+  padding: 15px 0 0 0;
+  border-radius: 50%;
+  background: #9D50BB;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  z-index: 1;
+}
+
+
+.frame_4 h3{
+  display: block;
+  margin: 0;
+  padding-bottom: 20px;
+  text-align: center;
+  line-height: 130%;
+  font-size: 120%;
+}
+
+
+.frame_5{
+  background: #9D50BB;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+}
+
+.frame_5 h3 {
+  width: 100%;
+  font-size: 150%;
+  margin: 0 0 20px 0;
+  padding: 0;
+  text-align: center;
+}
+
+.frame_6{
+  background: #f8f0e4;
+  padding: 10px;
+  text-align: left;
+}
+
+.frame_6 h3 {
+  width: 100%;
+  font-size: 120%;
+  margin: -10px -10px 10px -10px;
+  padding: 10px;
+  color: #fff;
+  background: #9D50BB;
+}
+
+.frame_7{
+  background: #f8f0e4;
+  padding: 10px;
+  text-align: left;
+}
+
+.frame_7 h3 {
+  border-radius: 20px;
+  font-size: 120%;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  color: #fff;
+  background: #9D50BB;
+}
+
+.frame_8 {
+  position: relative;
+  background: #f8f0e4;
+  border-radius: 10px;
+  padding: 20px;
+  line-height: 130%;
+  display: block;
+}
+
+.frame_8 h3{
+  transform: rotate(-30deg);
+  position: absolute;
+  top:-20px;
+  left: -30px;
+  display: block;
+  background:#9D50BB;
+  color: #fff;
+  border-radius: 10px;
+  padding: 5px 20px;
+  text-align: center;
+  line-height: 130%;
+  font-size: 90%;
+  animation: kurukurku 3s ease infinite alternate;
+}
+
+@keyframes kurukurku{
+  0% {
+    transform: rotate(-30deg);
+  }
+  90% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(-40deg);
+  }
+}
+
+.frame_9{
+  text-align: left;
+}
+
+.frame_9 h3 {
+  font-size: 120%;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  color: #fff;
+  display: block;
+  background: #9D50BB;
+}
+
+.frame_10 {
+  line-height: 130%;
+  display: block;
+  border:solid 1px rgba(0, 93, 177, 1);
+  padding: 20px;
+}
+
+.frame_10 h3{
+  display: block;
+  line-height: 130%;
+  font-size: 120%;
+  margin: 0;
+  color: #fff;
+  padding:5px 0 5px 10px;
+  margin: -20px -20px 10px -20px;
+  background: linear-gradient(-45deg, rgba(231, 60, 126, 1), rgba(35, 166, 213, 1));
+}
