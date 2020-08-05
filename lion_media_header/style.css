@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+.l-extra {
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1000;
+}
+
+.l-extra.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.t-light .l-extra {
+  border-bottom: 0;
+  background: linear-gradient(-45deg, rgba(0, 93, 177, .8), rgba(219, 201, 0, .8));
+  background-size: cover;
+  background: linear-gradient(-45deg, rgba(238, 119, 82, .8), rgba(231, 60, 126, .8), rgba(35, 166, 213, .8), rgba(35, 213, 171, .8));
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 30s ease infinite;
+  -moz-animation: Gradient 30s ease infinite;
+  animation: Gradient 30s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+.searchNavi {
+  padding: 10px 0;
+}
+.globalNavi {
+  padding: 0;
+}
+
+.globalNavi__list .menu-item {
+  padding: 0;
+  height: auto;
+  margin-bottom: 0;
+  border-left: 0;
+}
+
+.globalNavi__list .page_item a,
+.globalNavi__list .menu-item a{
+  display: block;
+  padding: 19px 15px;
+  font-weight: normal;
+  transition: .2s;
+  color: #fff;
+}
+
+.globalNavi__list .current-menu-item,
+.globalNavi__list .current-menu-item a:hover,
+.globalNavi__list .menu-item a:hover {
+  background: #000;
+  display: block;
+  color: #fff;
+  font-weight: normal;
+}
+
+
+@media only screen and (max-width: 767px){
+
+  .globalNavi::-webkit-scrollbar {
+    height: 2px;
+  }
+  .globalNavi::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+  }
+  .globalNavi::-webkit-scrollbar-thumb {
+    background: #f0b200;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+  }
+
+}
