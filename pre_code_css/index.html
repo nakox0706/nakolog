@@ -1,0 +1,75 @@
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <title>ソースコードを貼り付けるpre,codeタグをCSSでデザイン変更しコードのコピーボタンをつけたデモとサンプル │ 3oWebCreate WEB小ネタと生活ライフハック</title>
+  <link rel="stylesheet" href="./assets/css/highlight.min.css">
+  <link rel='stylesheet' href='./style.css' type='text/css' media='all' />
+  <script src="./assets/js/highlight.min.js"></script>
+  <script src="./assets/js/clipboard.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+  <section>
+    <h2>code</h2>
+    <code>border: solid 1px #dddddd;</code>の<code class="red">#dddddd</code>を<code class="blue">#ffffff</code>か<code class="yellow">#fff0000</code>変更する。
+  </section>
+
+  <section>
+    <h2>pre</h2>
+
+    <!-- CSS -->
+    <div class="pre__box code_css">
+      <span class="btn_copy" data-clipboard-target="#code_1">コピー</span>
+      <pre><code id="code_1" class="php">
+        .frame_1 {
+          border: solid 1px #dddddd;
+        }
+      </code></pre>
+    </div>
+
+    <!-- HTML -->
+    <div class="pre__box code_html">
+      <span class="btn_copy" data-clipboard-target="#code_2">コピー</span>
+
+      <pre><code id="code_2" class="htmlbar">
+        <span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"><span class="hljs-selector-tag">body</span> {<span class="hljs-attribute">width</span>: <span class="hljs-number">500px</span>;}</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/javascript"</span>&gt;</span><span class="javascript">
+          <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">$init</span>(<span class="hljs-params"></span>) </span>{<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;}
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">checked</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'title'</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- here goes the rest of the page --&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+      </code></pre>
+    </div>
+
+    <!-- JS -->
+    <div class="pre__box code_js">
+      <span class="btn_copy" data-clipboard-target="#code_3">コピー</span>
+      <pre><code id="code_3" class="js">
+        /*! jQuery v3.3.1 | (c) JS Foundation and other contributors | jquery.org/license */
+        !function(e,t){&quot;use strict&quot;;&quot;object&quot;==typeof module&amp;&amp;&quot;object&quot;==typeof
+        </code></pre>
+      </div>
+
+      <!-- PHP -->
+      <div class="pre__box code_php">
+        <span class="btn_copy" data-clipboard-target="#code_4">コピー</span>
+        <pre><code id="code_4" class="php">
+          &lt;?php echo mb_strimwidth(get_the_excerpt(), 0, 150, &quot;&hellip;&quot;, &quot;UTF-8&quot;); ?&gt;
+        </code></pre>
+      </div>
+
+    </section>
+
+    <script>
+    new ClipboardJS('.btn_copy');
+  </script>
+</body>
+</html>
