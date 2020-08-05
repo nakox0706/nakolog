@@ -1,0 +1,290 @@
+@charset "UTF-8";
+/*/////////////////////////////////////////////////
+//吹き出しのパターン色々
+/////////////////////////////////////////////////*/
+.balloon__contener {
+  clear: both;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.balloon__contener:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.balloon__contener figure {
+  width: 60px;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  /* 正方形を用意 */
+}
+
+.balloon__contener figure img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border: solid 1px #dddddd;
+}
+
+.balloon__contener figure figcaption {
+  color: #000000;
+  width: 60px;
+  position: absolute;
+  top: 63px;
+  text-align: center;
+  font-size: 70%;
+  line-height: 100%;
+}
+
+.balloon__contener .balloon__left {
+  width: 100%;
+  position: relative;
+  display: block;
+  max-width: 80%;
+  clear: both;
+}
+
+.balloon__contener .balloon__left figure {
+  left: 0;
+}
+
+.balloon__contener .balloon__left .balloon_thinking {
+  margin-left: 100px;
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #F2EDD0;
+}
+
+.balloon__contener .balloon__left .balloon_thinking:before {
+  content: "";
+  position: absolute;
+  left: -38px;
+  width: 13px;
+  height: 12px;
+  top: 10px;
+  background: #F2EDD0;
+  border-radius: 50%;
+}
+
+.balloon__contener .balloon__left .balloon_thinking:after {
+  content: "";
+  position: absolute;
+  left: -24px;
+  width: 20px;
+  height: 18px;
+  top: 13px;
+  background: #F2EDD0;
+  border-radius: 50%;
+}
+
+.balloon__contener .balloon__left .balloon__text {
+  margin-left: 80px;
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #F2EDD0;
+}
+
+.balloon__contener .balloon__left .balloon__text::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -10px;
+  top: 12px;
+  border-right: 15px solid #F2EDD0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.balloon__contener .balloon__right {
+  width: 100%;
+  position: relative;
+  display: block;
+  float: right;
+  max-width: 80%;
+  clear: both;
+}
+
+.balloon__contener .balloon__right figure {
+  right: 0;
+}
+
+.balloon__contener .balloon__right .balloon_thinking {
+  margin-right: 100px;
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #eeeeee;
+}
+
+.balloon__contener .balloon__right .balloon_thinking:before {
+  content: "";
+  position: absolute;
+  right: -38px;
+  width: 13px;
+  height: 12px;
+  top: 10px;
+  background: #eeeeee;
+  border-radius: 50%;
+}
+
+.balloon__contener .balloon__right .balloon_thinking:after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  width: 20px;
+  height: 18px;
+  top: 13px;
+  background: #eeeeee;
+  border-radius: 50%;
+}
+
+.balloon__contener .balloon__right .balloon__text {
+  margin-right: 80px;
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #eeeeee;
+}
+
+.balloon__contener .balloon__right .balloon__text::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: -10px;
+  top: 12px;
+  border-left: 15px solid #eeeeee;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.balloon__contener.bg__purple .balloon_thinking,
+.balloon__contener.bg__purple .balloon__text,
+.balloon__contener.bg__purple figure img {
+  background: #513961;
+}
+
+.balloon__contener.bg__purple .balloon_thinking:before {
+  background: #513961;
+}
+
+.balloon__contener.bg__purple .balloon_thinking:after {
+  background: #513961;
+}
+
+.balloon__contener.bg__purple .balloon__right .balloon__text:after {
+  border-left: 15px solid #513961;
+}
+
+.balloon__contener.bg__purple .balloon__left .balloon__text:after {
+  border-right: 15px solid #513961;
+}
+
+.balloon__contener.bg__pink .balloon_thinking,
+.balloon__contener.bg__pink .balloon__text,
+.balloon__contener.bg__pink figure img {
+  background: #F52F6C;
+}
+
+.balloon__contener.bg__pink .balloon_thinking:before {
+  background: #F52F6C;
+}
+
+.balloon__contener.bg__pink .balloon_thinking:after {
+  background: #F52F6C;
+}
+
+.balloon__contener.bg__pink .balloon__right .balloon__text:after {
+  border-left: 15px solid #F52F6C;
+}
+
+.balloon__contener.bg__pink .balloon__left .balloon__text:after {
+  border-right: 15px solid #F52F6C;
+}
+
+.balloon__contener.bg__green .balloon_thinking,
+.balloon__contener.bg__green .balloon__text,
+.balloon__contener.bg__green figure img {
+  background: #11C2BA;
+}
+
+.balloon__contener.bg__green .balloon_thinking:before {
+  background: #11C2BA;
+}
+
+.balloon__contener.bg__green .balloon_thinking:after {
+  background: #11C2BA;
+}
+
+.balloon__contener.bg__green .balloon__right .balloon__text:after {
+  border-left: 15px solid #11C2BA;
+}
+
+.balloon__contener.bg__green .balloon__left .balloon__text:after {
+  border-right: 15px solid #11C2BA;
+}
+
+.balloon__contener.bg__orenge .balloon_thinking,
+.balloon__contener.bg__orenge .balloon__text,
+.balloon__contener.bg__orenge figure img {
+  background: #F5594E;
+}
+
+.balloon__contener.bg__orenge .balloon_thinking:before {
+  background: #F5594E;
+}
+
+.balloon__contener.bg__orenge .balloon_thinking:after {
+  background: #F5594E;
+}
+
+.balloon__contener.bg__orenge .balloon__right .balloon__text:after {
+  border-left: 15px solid #F5594E;
+}
+
+.balloon__contener.bg__orenge .balloon__left .balloon__text:after {
+  border-right: 15px solid #F5594E;
+}
+
+.balloon__contener.color__purple .balloon_thinking,
+.balloon__contener.color__purple .balloon__text {
+  color: #513961;
+}
+
+.balloon__contener.color__pink .balloon_thinking,
+.balloon__contener.color__pink .balloon__text {
+  color: #F52F6C;
+}
+
+.balloon__contener.color__orenge .balloon_thinking,
+.balloon__contener.color__orenge .balloon__text {
+  color: #F5594E;
+}
+
+.balloon__contener.color__green .balloon_thinking,
+.balloon__contener.color__green .balloon__text {
+  color: #11C2BA;
+}
+
+.balloon__contener.color__white .balloon_thinking,
+.balloon__contener.color__white .balloon__text {
+  color: white;
+}
+
+@media only screen and (max-width: 767px) {
+  .balloon__contener .balloon__left,
+  .balloon__contener .balloon__right {
+    max-width: 100%;
+  }
+}
