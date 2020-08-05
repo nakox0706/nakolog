@@ -1,0 +1,148 @@
+@charset "UTF-8";
+/*----------このエリアは削除すると正しく動作しない可能性があります----------
+
+Theme Name:   LION MEDIA Child
+Theme URI:    http://fit-jp.com/theme/
+Description:  FIT(フィット) が制作するメディア用WordPressTHEME「LION MEDIA」の子テーマ
+Author:       Kota Naito　@FIT(フィット)
+Author URI:   http://fit-jp.com/about/
+Template:     lionmedia
+Version:      1.2
+License:      GNU GENERAL PUBLIC LICENSE
+License URI:  http://www.gnu.org/licenses/gpl.html
+
+----------このエリアは削除すると正しく動作しない可能性があります----------*/
+
+
+
+/*/////////////////////////////////////////////////
+//SP最適化
+/////////////////////////////////////////////////*/
+
+.noSp {
+  display: block !important;
+}
+.noPc {
+  display: none !important;
+}
+
+@media only screen and (max-width: 767px){
+
+
+  .l-wrapper {
+    width: 100%;
+    padding:0 5%;
+  }
+
+  .l-main {
+    width: 100%;
+    padding:5% 0;
+  }
+
+  .l-sidebar {
+    padding: 0 0 40px 0;
+  }
+
+  /* サイドバー要素非表示　*/
+  .related__contents {
+    display: none;
+  }
+
+  /* フォントサイズ大きく　*/
+  .content{
+    line-height: 170%;
+    font-size: 110%;
+    margin-top: 0;
+  }
+
+  .content h2 {
+    padding: 15px;
+    color: #191919;
+    border: 1px solid #E5E5E5;
+    border-left: 5px solid #f0b200;
+    font-size: 2rem;
+  }
+
+  /* タイトルバー幅狭く　*/
+  .singleTitle__heading {
+    min-height: 30px;
+    padding:5%;
+    padding-bottom: 0;
+    color: #000;
+  }
+
+  /* 投稿日等マージン詰める　*/
+  .singleTitle__heading .dateList.dateList-singleTitle {
+    padding: 0;
+  }
+
+  .heading.heading-singleTitle {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #000;
+  }
+
+  .heading.heading-singleTitle {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  .t-rich .single_eyecatch .eyecatch {
+    box-shadow: 0px ;
+  }
+
+  .singleTitle {
+    overflow: hidden;
+  }
+  .singleTitle::after {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.8;
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
+  }
+
+  .single_eyecatch {
+    width: 100%;
+    height: auto;
+  }
+
+  .single_eyecatch .eyecatch {
+    box-shadow: 0 0 0 0 rgba(0,0,0,1);
+    margin-bottom: 0px;
+  }
+
+
+  .single_eyecatch .eyecatch img:hover {
+    transform: scale(1);
+  }
+
+  .single_eyecatch img{
+    width: 100%;
+    height: auto;
+  }
+
+  .content .btn {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .noSp {
+    display: none !important;
+  }
+  .noPc {
+    display: block !important;
+  }
+
+  .content .row h3 {
+    margin-top: 20px;
+  }
+}
