@@ -27,9 +27,57 @@
 
 }
 
+.btn {
+  display: block;
+  color: #fff;
+  background-color: #eb6100;
+  border-bottom: 5px solid #b84c00;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  display: inline-block;
+    text-align: center;
+    min-height: 2.6rem;
+    padding: .7rem;
+    width: 200px;
+    border-radius: 10px;
+    height: 40px;
+    font-weight: bold;
+    transition: all .3s;
+
+    svg {
+      height: 50px;
+      width: 50px;
+    }
+
+    &:hover {
+    margin-top: 3px;
+    color: #fff;
+    background: #f56500;
+    border-bottom: 2px solid #b84c00;
+  }
+}
+
 /*/////////////////////////////////////////////////
-//吹き出しのパターン色々
+//svganimation
 /////////////////////////////////////////////////*/
+
+@keyframes bound {
+  0% {
+    fill: transparent;
+    transform: translateY(15px);
+  }
+
+  80% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    fill: rgba(125,152,206, 1);
+    transform: translateY(0px);
+  }
+}
+
+
 .svg__anime  {
   display: none;
 
@@ -69,25 +117,6 @@
     }
 
 }
-
-@keyframes bound {
-  0% {
-    fill: transparent;
-    transform: translateY(15px);
-  }
-
-  80% {
-    transform: translateY(-15px);
-  }
-
-  100% {
-    fill: rgba(125,152,206, 1);
-    transform: translateY(0px);
-  }
-}
-
-// キャンパスマップ
-
 
 
  .btn:hover {
