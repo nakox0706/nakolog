@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+}
+
+
+section {
+  width: 50%;
+  margin: 5% auto;
+}
+
+h2{
+  margin-top: 60px;
+}
+
+div {
+  padding: 20px;
+}
+
+/*/////////////////////////////////////////////////
+//コードタグ装飾
+/////////////////////////////////////////////////*/
+
+code{
+  display: inline-block;
+  background: #f8f0e4;
+  border-radius: 5px;
+  padding: 5px;
+  line-height: 130%;
+  margin-right: 5px;
+}
+
+/* 色パターン */
+code.red{
+  background: #ff0000;
+  color: #fff;
+}
+
+code.blue{
+  background: #138dd3;
+  color: #fff;
+}
+
+code.yellow{
+  background: #c7a712;
+  color: #fff;
+}
+
+
+/* ボックス表示 */
+.pre__box pre {
+  padding: 0;
+  margin: 0;
+}
+
+.pre__box code {
+  padding: 0;
+  margin: 0;
+  margin-right: 0;
+}
+
+.pre__box {
+  margin-top: 20px;
+  position: relative;
+  background: #f8f0e4;
+  border-radius: 10px;
+  padding: 20px;
+  line-height: 130%;
+  display: block;
+}
+
+/* CSSアイコン */
+.pre__box.code_css::before{
+  position: absolute;
+  top:-5px;
+  left: 5px;
+  display: block;
+  background: linear-gradient(-45deg, #9D50BB, #6E48AA);
+  color: #fff;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  width: 80px;
+  font-size: 80%;
+  line-height: 130%;
+  content: 'CSS';
+}
+
+/* HTMLアイコン */
+.pre__box.code_html::before{
+  position: absolute;
+  top:-5px;
+  left: 5px;
+  display: block;
+  background: linear-gradient(-45deg, #fe8c00, #f83600);
+  color: #fff;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  width: 80px;
+  font-size: 80%;
+  line-height: 130%;
+  content: 'HTML';
+}
+
+/* JSアイコン */
+.pre__box.code_js::before{
+  position: absolute;
+  top:-5px;
+  left: 5px;
+  display: block;
+  background: linear-gradient(-45deg, #ADD100, #7B920A);
+  color: #fff;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  width: 80px;
+  font-size: 80%;
+  line-height: 130%;
+  content: 'JS';
+}
+
+/* PHPアイコン */
+.pre__box.code_php::before{
+  position: absolute;
+  top:-5px;
+  left: 5px;
+  display: block;
+  background: linear-gradient(-45deg, #B993D6, #8CA6DB);
+  color: #fff;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  width: 80px;
+  font-size: 80%;
+  line-height: 130%;
+  content: 'PHP';
+}
+
+/* コピーボタン */
+.pre__box .btn_copy {
+  position: absolute;
+  top:10px;
+  right: 10px;
+  color: #888;
+  border-radius: 5px;
+  display: block;
+  font-size: 80%;
+  width: 40px;
+  padding: 5px 20px;
+  padding-left: 34px;
+  background:#fff url(./assets/img/copy.png) no-repeat 5px 3px;
+  background-size:20px auto;
+  cursor : pointer;
+  transition: 1s;
+}
+
+.pre__box .btn_copy:hover {
+  position: absolute;
+  top:10px;
+  right: 10px;
+  color: #fff;
+  border-radius: 5px;
+  display: block;
+  width: 60px;
+  font-size: 80%;
+  padding: 5px 20px;
+  padding-left: 44px;
+  background:#9D50BB url(./assets/img/copy.png) no-repeat 5px 3px;
+  background-size:20px auto;
+  cursor : pointer;
+}
