@@ -1,0 +1,540 @@
+@charset "UTF-8";
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  counter-reset: chapter;
+}
+
+ul,li,p,dl,dt,a {
+  margin: 0;
+  padding: 0;
+}
+h2:before {
+  content: counter(chapter) "章. ";
+  counter-increment: chapter;
+}
+
+h2{
+  margin-top: 60px;
+}
+
+hr {
+  padding: 20px;
+  border: 0px;
+}
+
+p{
+  padding:20px 0 60px 0;
+}
+
+.pager_1 ul {
+  width: 100%;
+  padding: 0;
+}
+
+@media only screen and (max-width: 767px){
+  section {
+    width: 90%;
+    margin: 5% auto;
+  }
+}
+
+
+/*/////////////////////////////////////////////////
+//ページャー装飾
+/////////////////////////////////////////////////*/
+
+
+/* その１  */
+
+.pager_1  ul.pagination {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.pager_1 .pagination li {
+  display: inline;
+  margin: 0 2px;
+  padding: 0;
+  display: inline-block;
+  background:#9D50BB;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.pager_1 .pagination li a{
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display:table;
+  color: #fff;
+  text-decoration: none;
+}
+
+.pager_1 .pagination li a span{
+  display:table-cell;
+  vertical-align:middle;
+}
+
+.pager_1 .pagination li a:hover,
+.pager_1 .pagination li a.active{
+  color: #000;
+  background: #ccf;
+}
+
+@media only screen and (max-width: 767px){
+  .pager_1 .pagination li{
+    display: none;
+  }
+
+  .pager_1 .pagination li.pre,
+  .pager_1 .pagination li.next{
+    display: inline-block;
+    width: 40%;
+    height: 50px;
+    text-align: center;
+  }
+
+  .pager_1 .pagination li.pre a,
+  .pager_1 .pagination li.next a{
+    width: 100%;
+    text-align: center;
+  }
+
+  .pager_1 .pagination li.pre span::after{
+    content: "　前の10件へ";
+  }
+
+  .pager_1 .pagination li.next span::before{
+    content: "次の10件へ　";
+  }
+
+}
+
+
+/* その2  */
+.pager_2 .pagination {
+  text-align: center;
+}
+
+.pager_2 .pagination li {
+  display: inline;
+  margin: 0 2px;
+  padding: 0;
+  display: inline-block;
+  background:#9D50BB;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+
+.pager_2 .pagination li a{
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display:table;
+  color: #fff;
+  text-decoration: none;
+}
+
+.pager_2 .pagination li a span{
+  display:table-cell;
+  vertical-align:middle;
+}
+
+.pager_2 .pagination li a:hover,
+.pager_2 .pagination li a.active{
+  color: #000;
+  background: #ccf;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 767px){
+  .pager_2 .pagination li{
+    display: none;
+  }
+
+  .pager_2 .pagination li.pre,
+  .pager_2 .pagination li.next{
+    display: inline-block;
+    width: 40%;
+    height: 50px;
+    text-align: center;
+  }
+
+  .pager_2 .pagination li.pre a,
+  .pager_2 .pagination li.next a{
+    width: 100%;
+    text-align: center;
+  }
+
+  .pager_2 .pagination li.pre span::after{
+    content: "　前の10件へ";
+  }
+
+  .pager_2 .pagination li.next span::before{
+    content: "次の10件へ　";
+  }
+
+}
+
+
+/* その3  */
+.pager_3 .pagination {
+  text-align: center;
+}
+
+.pager_3 .pagination li {
+  display: inline;
+  margin: 0 2px;
+  padding: 0;
+  display: inline-block;
+  background:#9D50BB;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: relative;
+  border-radius: 50px;
+}
+
+
+.pager_3 .pagination li a{
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display:table;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all  0.3s ease;
+}
+
+.pager_3 .pagination li a span{
+  display:table-cell;
+  vertical-align:middle;
+}
+
+.pager_3 .pagination li a:hover,
+.pager_3 .pagination li a.active{
+  color: #000;
+  background: #ccf;
+  border-radius: 50px;
+}
+
+@media only screen and (max-width: 767px){
+  .pager_3 .pagination li{
+    display: none;
+  }
+
+  .pager_3 .pagination li.pre,
+  .pager_3 .pagination li.next{
+    display: inline-block;
+    width: 40%;
+    height: 50px;
+    text-align: center;
+  }
+
+  .pager_3 .pagination li.pre a,
+  .pager_3 .pagination li.next a{
+    width: 100%;
+    text-align: center;
+  }
+
+  .pager_3 .pagination li.pre span::after{
+    content: "　前の10件へ";
+  }
+
+  .pager_3 .pagination li.next span::before{
+    content: "次の10件へ　";
+  }
+
+}
+
+
+/* その4  */
+.pager_4 .pagination {
+  text-align: center;
+}
+
+.pager_4 .pagination li {
+  display: inline;
+  margin: 0 2px;
+  padding: 0;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: relative;
+  border-radius: 50px;
+}
+
+.pager_4 .pagination li.pre,
+.pager_4 .pagination li.next{
+  background: #9D50BB;
+  color: #fff;
+}
+
+.pager_4 .pagination li a{
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display:table;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all  0.3s ease;
+}
+
+.pager_4 .pagination li.pre a,
+.pager_4 .pagination li.next a{
+  color: #fff;
+}
+
+.pager_4 .pagination li a span{
+  display:table-cell;
+  vertical-align:middle;
+}
+
+.pager_4 .pagination li a:hover,
+.pager_4 .pagination li a.active{
+  color: #000;
+  background: #ccf;
+  border-radius: 10px;
+  border-radius: 50px;
+  animation: animScale 0.4s ease-out;
+  transform-origin: 50% 50%;
+  -webkit-animation: animScale 0.4s ease-out;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: animScale 0.4s ease-out;
+  -moz-transform-origin: 50% 50%;
+}
+@keyframes animScale {
+  0% { transform: scale(0.8, 0.8); }
+  40% { transform: scale(1.2, 1.2); }
+  60% { transform: scale(1, 1); }
+  80% { transform: scale(1.1, 1.1); }
+  100% { transform: scale(1, 1); }
+}
+@-webkit-keyframes animScale {
+  0% { -webkit-transform: scale(0.8, 0.8); }
+  40% { -webkit-transform: scale(1.2, 1.2); }
+  60% { -webkit-transform: scale(1, 1); }
+  80% { -webkit-transform: scale(1.1, 1.1); }
+  100% { -webkit-transform: scale(1, 1); }
+}
+@-moz-keyframes animScale {
+  0% { -moz-transform: scale(0.8, 0.8); }
+  40% { -moz-transform: scale(1.2, 1.2); }
+  60% { -moz-transform: scale(1, 1); }
+  80% { -moz-transform: scale(1.1, 1.1); }
+  100% { -moz-transform: scale(1, 1); }
+}
+
+
+@media only screen and (max-width: 767px){
+  .pager_4 .pagination li{
+    display: none;
+  }
+
+  .pager_4 .pagination li.pre,
+  .pager_4 .pagination li.next{
+    display: inline-block;
+    width: 40%;
+    height: 50px;
+    text-align: center;
+  }
+
+  .pager_4 .pagination li.pre a,
+  .pager_4 .pagination li.next a{
+    width: 100%;
+    text-align: center;
+  }
+
+  .pager_4 .pagination li.pre span::after{
+    content: "　前の10件へ";
+  }
+
+  .pager_4 .pagination li.next span::before{
+    content: "次の10件へ　";
+  }
+
+}
+
+
+/* その5  */
+.pager_5 .pagination {
+  text-align: center;
+}
+
+.pager_5 .pagination li {
+  display: inline;
+  margin: 0 2px;
+  padding: 0;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+
+.pager_5 .pagination li a{
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display:table;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all  0.3s ease;
+}
+
+.pager_5 .pagination li a span{
+  display:table-cell;
+  vertical-align:middle;
+}
+
+.pager_5 .pagination li a:hover,
+.pager_5 .pagination li a.active{
+  color: #fff;
+  background: #9D50BB;
+}
+
+@media only screen and (max-width: 767px){
+  .pager_5 .pagination li{
+    display: none;
+  }
+
+  .pager_5 .pagination li.pre,
+  .pager_5 .pagination li.next{
+    display: inline-block;
+    width: 40%;
+    height: 50px;
+    text-align: center;
+  }
+
+  .pager_5 .pagination li.pre a,
+  .pager_5 .pagination li.next a{
+    width: 100%;
+    text-align: center;
+  }
+
+  .pager_5 .pagination li.pre span::after{
+    content: "　前の10件へ";
+  }
+
+  .pager_5 .pagination li.next span::before{
+    content: "次の10件へ　";
+  }
+
+}
+
+
+/* その6  */
+.pager_6 .pagination {
+  text-align: center;
+}
+
+.pager_6 .pagination li {
+  display: inline;
+  margin: 0 2px;
+  padding: 0;
+  display: inline-block;
+  background:#9D50BB;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+.pager_6 .pagination li.pre,
+.pager_6 .pagination li.next{
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+}
+
+.pager_6 .pagination li a{
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display:table;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all  0.3s ease;
+}
+
+.pager_6 .pagination li a span{
+  display:table-cell;
+  vertical-align:middle;
+}
+
+.pager_6 .pagination li a:hover,
+.pager_6 .pagination li a.active{
+  color: #000;
+  background: #ccf;
+  border-color: #00f;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 767px){
+  .pager_6 .pagination li{
+    display: none;
+  }
+
+  .pager_6 .pagination li.pre,
+  .pager_6 .pagination li.next{
+    display: inline-block;
+    width: 20%;
+    height: 50px;
+    text-align: center;
+  }
+
+  .pager_6 .pagination li.pre a,
+  .pager_6 .pagination li.next a{
+    width: 100%;
+    text-align: center;
+  }
+
+
+}
