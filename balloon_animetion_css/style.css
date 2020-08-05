@@ -1,0 +1,383 @@
+@charset "UTF-8";
+/*/////////////////////////////////////////////////
+//チャット画面(会話方式)を記事に表示する方法
+/////////////////////////////////////////////////*/
+.balloon__contener {
+  clear: both;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.balloon__contener:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.balloon__contener figure {
+  width: 60px;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  /* 正方形を用意 */
+}
+
+.balloon__contener figure img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border: solid 1px #dddddd;
+}
+
+.balloon__contener figure figcaption {
+  color: #000000;
+  width: 60px;
+  position: absolute;
+  top: 60px;
+  text-align: center;
+  font-size: 70%;
+  line-height: 100%;
+}
+
+.balloon__contener .balloon__left {
+  width: 100%;
+  position: relative;
+  display: block;
+  max-width: 80%;
+  clear: both;
+}
+
+.balloon__contener .balloon__left figure {
+  left: 0;
+}
+
+.balloon__contener .balloon__left .balloon__text {
+  margin-left: 80px;
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #d8f4f8;
+}
+
+.balloon__contener .balloon__left .balloon__text::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -10px;
+  top: 12px;
+  border-right: 15px solid #d8f4f8;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.balloon__contener .balloon__right {
+  width: 100%;
+  position: relative;
+  display: block;
+  float: right;
+  max-width: 80%;
+  clear: both;
+}
+
+.balloon__contener .balloon__right figure {
+  right: 0;
+}
+
+.balloon__contener .balloon__right .balloon__text {
+  margin-right: 80px;
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #eeeeee;
+}
+
+.balloon__contener .balloon__right .balloon__text::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: -10px;
+  top: 12px;
+  border-left: 15px solid #eeeeee;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+@media only screen and (max-width: 767px) {
+  .balloon__contener .balloon__left,
+  .balloon__contener .balloon__right {
+    max-width: 100%;
+  }
+}
+
+/*/////////////////////////////////////////////////
+//チャット画面(会話方式)にアイコンを追加する方法
+/////////////////////////////////////////////////*/
+.balloon__contener .icon_emotion {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  background-size: auto 100%;
+  padding: 0;
+  z-index: 1;
+}
+
+.balloon__contener .balloon__right .icon_emotion {
+  left: 0px;
+}
+
+/*//// ガーン /////*/
+@-webkit-keyframes icon_shock {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  51%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes icon_shock {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  51%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.icon_shock .balloon__left .balloon__text {
+  background-color: #c7ade2;
+}
+
+.icon_shock .balloon__left .balloon__text::after {
+  border-right: 15px solid #c7ade2;
+}
+
+.icon_shock .icon_emotion {
+  background: url("./icon/icon_shock.svg") repeat-x 0 0;
+  -webkit-animation: icon_shock 1s ease-in-out infinite alternate;
+  animation: icon_shock 1s ease-in-out infinite alternate;
+}
+
+/*//// 汗 /////*/
+@-webkit-keyframes icon_sweat {
+  16.65% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes icon_sweat {
+  16.65% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.icon_sweat .balloon__left .balloon__text {
+  background-color: #a5d4d8;
+}
+
+.icon_sweat .balloon__left .balloon__text::after {
+  border-right: 15px solid #a5d4d8;
+}
+
+.icon_sweat .icon_emotion {
+  background: url("./icon/icon_sweat.svg") repeat-x 0 0;
+  -webkit-animation: icon_sweat 1s ease-in-out infinite alternate;
+  animation: icon_sweat 1s ease-in-out infinite alternate;
+}
+
+/*//// 気分UP /////*/
+@-webkit-keyframes icon_up {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(1em);
+    transform: translateY(1em);
+  }
+}
+@keyframes icon_up {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(1em);
+    transform: translateY(1em);
+  }
+}
+
+.icon_up .balloon__left .balloon__text {
+  background-color: #f0d2a7;
+}
+
+.icon_up .balloon__left .balloon__text::after {
+  border-right: 15px solid #f0d2a7;
+}
+
+.icon_up .icon_emotion {
+  background: url("./icon/icon_up.svg") repeat-x 0 0;
+  -webkit-animation: icon_up 1s ease-in-out infinite alternate;
+  animation: icon_up 1s ease-in-out infinite alternate;
+}
+
+/*//// 怒る /////*/
+@-webkit-keyframes icon_angry {
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+@keyframes icon_angry {
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+.icon_angry .balloon__left .balloon__text {
+  background-color: #e7b3b1;
+}
+
+.icon_angry .balloon__left .balloon__text::after {
+  border-right: 15px solid #e7b3b1;
+}
+
+.icon_angry .icon_emotion {
+  background: url("./icon/icon_angry.svg") repeat-x 0 0;
+  -webkit-animation: icon_angry 1s ease-in-out infinite alternate;
+  animation: icon_angry 1s ease-in-out infinite alternate;
+}
+
+/*//// ハート /////*/
+@-webkit-keyframes icon_heart {
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+@keyframes icon_heart {
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+.icon_heart .balloon__left .balloon__text {
+  background-color: #f9d7e8;
+}
+
+.icon_heart .balloon__left .balloon__text::after {
+  border-right: 15px solid #f9d7e8;
+}
+
+.icon_heart .icon_emotion {
+  background: url("./icon/icon_heart.svg") repeat-x 0 0;
+  -webkit-animation: icon_heart 1s ease-in-out infinite alternate;
+  animation: icon_heart 1s ease-in-out infinite alternate;
+}
+
+/*//// 気分ダウン /////*/
+@-webkit-keyframes img_down {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  51%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes img_down {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  51%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.img_down .balloon__left .balloon__text {
+  background-color: #adbedb;
+}
+
+.img_down .balloon__left .balloon__text::after {
+  border-right: 15px solid #adbedb;
+}
+
+.img_down .icon_emotion {
+  background: url("./icon/icon_down.svg") repeat-x 0 0;
+  -webkit-animation: img_down 1.3s ease-in-out infinite alternate;
+  animation: img_down 1.3s ease-in-out infinite alternate;
+}
